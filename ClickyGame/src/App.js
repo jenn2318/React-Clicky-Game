@@ -89,6 +89,7 @@ class App extends Component {
 
 }
 
+//Here we will React what to Render on the page 
 render() {
     return (
         <div>
