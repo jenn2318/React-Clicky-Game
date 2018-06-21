@@ -1,3 +1,4 @@
+//Imports for Components for React to work
 import React, { Component } from 'react';
 import NavBar from "./component/Wrapper";
 import Image from "./component";
@@ -15,6 +16,7 @@ class App extends Component {
         status:0
     };
 
+    //This is the shuffle for loop
     shuffle = (f) => {
         for (let i = f.length - 1; f > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -23,6 +25,7 @@ class App extends Component {
         return f;
     }
 
+    //This code will handle when the flower picture is clicked....
     handleClickedFlower = (id) => {
         let newFlower = this.state.flowers;
         const checkFlower = newFlowers.indexOf(newFlowers.find(flower => flower.id === id));
@@ -43,7 +46,7 @@ class App extends Component {
         }
 
     }
-
+//Code to let the user see their high score of every game
     handleHighScore = (score) => {
         const newHighScore = score;
         if(score > this.state.highScore)
@@ -53,13 +56,13 @@ class App extends Component {
             this.youWin()
         }
     }
-
+ //The user will see their current score
     handleCurrentScore = () => {s
         const newScore = this.state.currentScore + 1;
         this.setState({currentScore:newScore});
         this.handleHighScore(newScore);
     }
-
+   //This will reset the flowers in order
     resetFlowers = () => {
         let newFlowers = this.state.flowers;
         newFlower.forEach(function(item,index){
@@ -68,18 +71,18 @@ class App extends Component {
         });
         this.setState({flowers:newFlowers});
     }
-
+//Reset the game to start over
     resetGame = () => {
         this.setState({currentScore:0});
         this.setState({status:0})
         this.setState({gameText:"Click a picture to start the game!"})
         this.resetFlowers();
     }
-
+//Loss Message
     youLose = () => {
         this.setState({gameText:"You Lose! (Try again and reset)"});
     }
-
+//Win Message
     youWin = () => {
         this.setState({gameText:"You Win! (Play Again and reset)"});
     }
