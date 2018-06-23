@@ -26,23 +26,23 @@ class App extends Component {
 
     //This code will handle when the flower picture is clicked....
     handleClickedFlower = (id) => {
-        // let newFlower = this.state.flowers;
-        // const checkFlower = newFlowers.indexOf(newFlowers.find(flower => flower.id === id));
-        // if((newFlowers[checkFlower].touched === 0) && (this.state.status === 0))
-        // {
-        //     newFlowers[checkFlower].checkGoodBad = "card is Good";
-        //     newFlowers[checkFlower].clicked = 1;
-        //     newFlower[checkFlower].checkGoodBad = "";
-        //     this.shuffle(newFlowers);
-        //     this.setState({flowers:newFlowers});
-        //     this.handleCurrentScore();
-        // }
-        // else if (this.state.status === 0)
-        // {
-        //     newFlowers[checkFlower].checkGoodBad = "card is Bad";
-        //     this.setState({status:1});
-        //     this.youLose();
-        // }
+        let newFlowers = this.state.flowers;
+        const checkFlower = newFlowers.indexOf(newFlowers.find(flower => flower.id === id));
+        if((newFlowers[checkFlower].touched === 0) && (this.state.status === 0))
+        {
+            newFlowers[checkFlower].checkGoodBad = "card is Good";
+            newFlowers[checkFlower].clicked = 1;
+            newFlowers[checkFlower].checkGoodBad = "";
+            this.shuffle(newFlowers);
+            this.setState({flowers:newFlowers});
+            this.handleCurrentScore();
+        }
+        else if (this.state.status === 0)
+        {
+            newFlowers[checkFlower].checkGoodBad = "card is Bad";
+            this.setState({status:1});
+            this.youLose();
+        }
 
     }
 //Code to let the user see their high score of every game
