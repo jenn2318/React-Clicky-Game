@@ -27,3 +27,7 @@ yarn-error.log*
 
 .idea
 .idea/workspace.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/React-Clicky-Game.iml
