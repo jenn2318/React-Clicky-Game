@@ -80,37 +80,6 @@ return data;
         return this.state.highScore
     }
 }
-//  //The user will see their current score
-//     handleCurrentScore = () => {
-//         const newScore = this.state.currentScore + 1;
-//         this.setState({currentScore:newScore});
-//         this.handleHighScore(newScore);
-//     }
-//    //This will reset the flowers in order
-//     resetFlowers = () => {
-//         let newFlowers = this.state.flowers;
-//         newFlowers.forEach(function(item,index){
-//             item.clicked = 0;
-//             item.goodBad = "";
-//         });
-//         this.setState({flowers:newFlowers});
-//     }
-// //Reset the game to start over
-//     resetGame = () => {
-//         this.setState({currentScore:0});
-//         this.setState({status:0})
-//         this.setState({gameText:"Click a picture to start the game!"})
-//         this.resetFlowers();
-//     }
-// //Loss Message
-//     youLose = () => {
-//         this.setState({gameText:"You Lose! (Try again and reset)"});
-//     }
-// //Win Message
-//     youWin = () => {
-//         this.setState({gameText:"You Win! (Play Again and reset)"});
-//     }
-
 
 
     //Here we will React what to Render on the page
