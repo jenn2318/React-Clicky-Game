@@ -16,7 +16,6 @@ class App extends Component {
     };
 
     //This is the shuffle for loop
-
     shuffle = data => {
     let i = data.length - 1;
     while (i > 0) {
